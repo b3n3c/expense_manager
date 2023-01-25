@@ -1,0 +1,19 @@
+{
+    "expenseList": "Expenses",
+    "categoryList": "Categories",
+    "statistics": "Statistics",
+    "title": "Title",
+    "details": "Details",
+    "cost": "Cost",
+    "required": "required",
+    "save": "Save",
+    "selectDate": "Select date",
+    "addExpense": "Add Expense",
+    "emptyList": "The list is empty",
+    "addCategory": "Add Category",
+    "categoryName": "CategoryName",
+    "cancel": "CANCEL",
+    "ok": "OK",
+    "warning": "Warning",
+    "warningText": "If you change the category list, every existing category will be permanently saved. The category names won't change if you change the application language."
+}

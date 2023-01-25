@@ -1,0 +1,19 @@
+{
+    "expenseList": "Kiadások",
+    "categoryList": "Kategóriák",
+    "statistics": "Statisztika",
+    "title": "Megnevezés",
+    "details": "Részletek",
+    "cost": "Költség",
+    "required": "kötelező",
+    "save": "Mentés",
+    "selectDate": "Dátum kiválasztása",
+    "addExpense": "Hozzáadás",
+    "emptyList": "A lista üres.",
+    "addCategory": "Kategória hozzáadása",
+    "categoryName": "Megnevezés",
+    "cancel": "MÉGSEM",
+    "ok": "OK",
+    "warning": "Figyelmeztetés",
+    "warningText": "Ha megváltoztatod a listát, az összes eddigi név véglegesen mentésre kerül. Nyelvváltás esetén nem fognak megváltozni a kategóriák."
+}

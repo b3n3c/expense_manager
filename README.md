@@ -1,4 +1,4 @@
-# targyalo
+# ExpenseManager
 
 A new Flutter project.
 

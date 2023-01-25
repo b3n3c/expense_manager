@@ -45,7 +45,6 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
 
   @override
   Widget build(BuildContext context) {
-    int category_index = 0;
     return Scaffold(
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.title),
@@ -133,11 +132,13 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                   ReceiptPicture(path: context.watch<ExpenseProvider>().expense.receiptPath),
                   AddressCard(address: context.watch<ExpenseProvider>().getAddress()),
                   ContactCard(contact: context.watch<ExpenseProvider>().getContact()),
-                  ElevatedButton(
-                    onPressed: () {
-                      validated();
-                    },
-                    child: Text(AppLocalizations.of(context)!.addExpense),
+                  Center(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        validated();
+                      },
+                      child: Text(AppLocalizations.of(context)!.addExpense),
+                    ),
                   )
                 ],
               ),

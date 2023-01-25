@@ -5,8 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:targyalo/camera_manager.dart';
-import 'package:provider/provider.dart';
-import 'dart:developer' as developer;
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TakeProfilePictureScreen extends StatefulWidget {
   const TakeProfilePictureScreen({super.key});
@@ -69,16 +68,14 @@ class _TakeProfilePictureState extends State<TakeProfilePicture> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Kép készítése"),
+        title: Text(AppLocalizations.of(context)!.takePicture),
       ),
       body: FutureBuilder(
         future: _initializeControllerFuture,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
-            // A kamera inicializálódott, meg lehet mutatni az előképet
             return CameraPreview(cameraManager.cameraController);
           } else {
-            // Még nincs áll rendelkezésre a kamera, betöltő ikon-t mutatunk addig.
             return Center(child: CircularProgressIndicator());
           }
         },
@@ -88,10 +85,8 @@ class _TakeProfilePictureState extends State<TakeProfilePicture> {
         child: Icon(Icons.camera_alt),
         onPressed: () async {
           try {
-            // Inicializáljuk a kamerát
             await _initializeControllerFuture;
 
-            // A kép mentésének a helye.
             final path = join(
               (await getApplicationDocumentsDirectory()).path,
               DateTime.now().millisecondsSinceEpoch.toString() + '.png',
@@ -100,12 +95,10 @@ class _TakeProfilePictureState extends State<TakeProfilePicture> {
             if (file.existsSync()) {
               file.deleteSync();
             }
-            // Készítunk egy képet
             final picture = await cameraManager.cameraController.takePicture();
             final pictureFile = File(picture.path);
             await pictureFile.copy(file.path);
 
-            // Visszaadjuk a mentett fájlt az előző képernyőnek.
             Navigator.pop(context, file);
           } catch (e) {
             // Valami hiba volt...

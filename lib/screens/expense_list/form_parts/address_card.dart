@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:map_location_picker/map_location_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:targyalo/providers/expense_provider.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../../models/Address.dart';
 
 class AddressCard extends StatefulWidget {
@@ -111,7 +111,7 @@ class _AddressCardState extends State<AddressCard> {
                     ),
                   );
                 },
-                child: Text("Hely megadása")
+                child: Text(AppLocalizations.of(context)!.selectAddress)
             ),
           ],
         ),

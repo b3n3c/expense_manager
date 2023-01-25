@@ -15,5 +15,9 @@
     "cancel": "MÉGSEM",
     "ok": "OK",
     "warning": "Figyelmeztetés",
-    "warningText": "Ha megváltoztatod a listát, az összes eddigi név véglegesen mentésre kerül. Nyelvváltás esetén nem fognak megváltozni a kategóriák."
+    "warningText": "Ha megváltoztatod a listát, az összes eddigi név véglegesen mentésre kerül. Nyelvváltás esetén nem fognak megváltozni a kategóriák.",
+    "selectAddress": "Hely kiválasztása",
+    "noSelectedContact": "Nincs kiválasztott névjegy",
+    "selectContact": "Névjegy kiválasztása",
+    "takePicture": "Kép készítése"
 }

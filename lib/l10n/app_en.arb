@@ -15,5 +15,9 @@
     "cancel": "CANCEL",
     "ok": "OK",
     "warning": "Warning",
-    "warningText": "If you change the category list, every existing category will be permanently saved. The category names won't change if you change the application language."
+    "warningText": "If you change the category list, every existing category will be permanently saved. The category names won't change if you change the application language.",
+    "selectAddress": "Select Place",
+    "noSelectedContact": "No selected contact",
+    "selectContact": "Select contact",
+    "takePicture": "Take a picture"
 }

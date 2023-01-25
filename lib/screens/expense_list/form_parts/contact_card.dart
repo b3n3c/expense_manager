@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_contact_picker/flutter_native_contact_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:targyalo/providers/expense_provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ContactCard extends StatefulWidget {
 
@@ -13,11 +14,10 @@ class ContactCard extends StatefulWidget {
 }
 
 class _ContactCardState extends State<ContactCard> {
-  final FlutterContactPicker _contactPicker = new FlutterContactPicker();
+  final FlutterContactPicker _contactPicker = FlutterContactPicker();
   Contact? _contact;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     if(widget.contact != null){
       _contact = widget.contact;
@@ -33,11 +33,11 @@ class _ContactCardState extends State<ContactCard> {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               Text(
-                _contact == null ? 'Nincs kiválasztott névjegy' : _contact.toString(),
+                _contact == null ? AppLocalizations.of(context)!.noSelectedContact : _contact.toString(),
               ),
               MaterialButton(
                 color: Colors.blue,
-                child: Text("Névjegy kiválasztása"),
+                child: Text(AppLocalizations.of(context)!.selectContact),
                 onPressed: () async {
                   Contact? contact = await _contactPicker.selectContact();
                   setState(() {
